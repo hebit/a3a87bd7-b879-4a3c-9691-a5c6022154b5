@@ -16,6 +16,7 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 body {
@@ -280,6 +281,7 @@ body {
 }
 
 .gallery {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1rem;
@@ -338,6 +340,19 @@ body {
 
 .ratio-3-4 {
   aspect-ratio: 3 / 4;
+}
+
+.blocking-overlay {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40vh;
+  background: linear-gradient(to bottom, #f2f2f200 0%, #f2f2f2FF 60%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
 }
 
 @keyframes reveal {
